@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    height: 100vh;
+    /* width: 100vw; */
+    overflow-x: hidden;
+}
+
+header{
+    background-color: brown;
+    text-align: center;
+    max-width: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px dotted white;
+    padding: 1.4rem;
+    min-width: 170px;
+}
+
+.hero{
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+    min-height: 450px;
+    line-height: 1.4;
+    padding: 10px ;
+}
+
+.banner{
+    background-image: url('./Images/bg.jpg');
+}
+
+
+.banner-img{
+    width: 450px;
+    padding-top: 1.8rem;
+}
+
+.hero .left{
+    align-self: center;
+}
+
+.left h1{
+    max-width: 600px;
+}
+
+.left p{
+    padding-top: 10px;
+}
+
+.about{
+    background-color: rgb(248, 228, 232);
+    min-height: 450px;
+    padding: 2.7rem 0;
+}
+
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.smoothie{
+    max-width: 370px;
+    align-self: center;
+}
+
+.about-container .right h1{
+    padding-bottom: 0.6rem;
+}
+
+/* .about-container .right{
+    display: grid;
+} */
+
+.about-container .right{
+    align-self: center;
+    padding-left: 1.2rem;
+    line-height: 1.2;
+}
+
+.about-container .right{
+    padding-bottom: 0.5rem;
+}
+
+.menu{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem auto;
+    max-width: 1100px;
+    gap: 1.5rem;
+}
+
+.menu-item{
+    border: 1px solid rgb(248, 228, 232);
+    border-radius: 7px;
+    max-height: 320px;
+    max-width: 350px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-1{
+    background-color: rgb(248, 228, 232);
+}
+
+.color-2{
+    background-color: pink;
+}
+
+.menu-img{
+    max-width: 150px;
+    height: 170px;
+    margin-top: 10%;
+    margin-left: 30%;
+}
+
+.menu-item .menu-info h3, .menu-info p{
+    text-align: center;
+    align-self: flex-end;
+}
+
+
+
+footer{
+    background-color: pink;
+    font-size: 1.3rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 1rem auto;
+    min-height: 150px;
+    align-items: center;
+}
+
+.footer-nav ul{
+    display: flex;
+}
+
+p a{
+    text-decoration: none;
+    color: black;
+}
+
+footer li{
+  list-style: none;
+  margin-right: 1rem;  
+}
+
+footer li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: font-size 0.3s ease-in-out;
+}
+
+footer li a:hover{
+    text-decoration: underline;
+    font-size: 1.4rem;
+}
+
+/***************MEDIA QUERIES***********************/
+
+@media screen and (min-width: 300px) and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    .hero{
+        /* margin-top: 35%; */
+        padding: 2.2rem;
+        padding-bottom: 3.5rem;
+        line-height: 0.9;
+        position: relative;
+        /* font-size: 1rem; */
+        /* background-image: url('./Images/bg.jpg'); */
+        /* background-repeat: no-repeat;
+        background-size: 400px;
+        background-position: center center; */
+        /* position: relative; */
+    }
+    /* .hero::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+    } */
+    .smoothie{
+        width: 320px;
+    }
+    .banner-img{
+        display: none;
+    }
+    .about-container{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .menu-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .menu-item{
+        justify-self: center;
+        text-align: center;
+        padding: 1.2rem;
+        width: 320px;
+    }
+    .menu-img{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    footer{
+        padding: 1rem;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-nav{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .banner-img{
+        width: 350px;
+    }
+    .hero{
+        /* margin-top: 35%; */
+        padding: 2.2rem;
+        padding-bottom: 3.5rem;
+        line-height: 0.9;
+        /* font-size: 1rem; */
+        /* background-image: url('./Images/strawberry-cheesecake.png'); */
+    }
+    .smoothie{
+        width: 320px;
+    }
+    .menu-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-item{
+        justify-self: center;
+        text-align: center;
+        padding: 1.2rem;
+        width: 320px;
+    }
+    .menu-img{
+        margin-top: 0;
+        margin-left: 0;
+    }
+    footer{
+        padding: 1rem;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-nav{
+        margin-top: 1rem;
+    }
+}
